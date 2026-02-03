@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IIoT Predictive Maintenance Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f7f7f7;
+      color: #222;
+    }
+    header {
+      margin-bottom: 20px;
+    }
+    .status-card {
+      padding: 16px;
+      background: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      margin-bottom: 20px;
+    }
+    .charts {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    canvas {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Machine Health Dashboard</h1>
+    <p>Live sensor trends and backend health evaluation.</p>
+  </header>
+
+  <section class="status-card">
+    <h2>Machine: <span id="machine-id">M01</span></h2>
+    <p>Health Score: <strong id="health-score">--</strong></p>
+    <p>Status: <strong id="health-status">--</strong></p>
+    <p>Reason: <span id="health-reason">--</span></p>
+  </section>
+
+  <section class="charts">
+    <canvas id="vibration-chart"></canvas>
+    <canvas id="current-chart"></canvas>
+    <canvas id="temperature-chart"></canvas>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
