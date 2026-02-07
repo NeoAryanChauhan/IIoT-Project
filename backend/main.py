@@ -17,3 +17,11 @@ def sensor_data(data: dict):
     return {
         "message": "Data stored successfully"
     }
+
+@app.get("/sensor/latest")
+def get_latest():
+    data = sensor_collection.find_one(sort=[("_id", -1)])
+    if data:
+        data["_id"] = str(data["_id"])
+    return data
+
