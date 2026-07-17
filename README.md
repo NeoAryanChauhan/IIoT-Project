@@ -6,7 +6,7 @@ This project presents an Industrial Internet of Things (IIoT) based predictive m
 
 The system captures operational parameters such as temperature, current, and vibration, processes them through a data pipeline, and estimates machine health to enable early detection of potential failures.
 
----
+-----
 
 ## Objectives
 
